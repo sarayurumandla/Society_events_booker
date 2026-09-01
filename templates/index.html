@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Society Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>University Society Events</h1>
+
+    {% for event in events %}
+
+        <div>
+            <h2>{{ event["name"] }}</h2>
+
+            <p>Date: {{ event["event_date"] }}</p>
+
+            <p>Location: {{ event["location"] }}</p>
+
+            <p>{{ event["description"] }}</p>
+
+            <p>Capacity: {{ event["capacity"] }}</p>
+
+            <a href="/register/{{ event['id'] }}">Register</a>
+        </div>
+
+        <hr>
+
+    {% endfor %}
+
+    <a href="/add-event">Add an Event</a>
+
+</body>
+</html>

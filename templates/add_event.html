@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Event</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Add a Society Event</h1>
+
+    <form method="POST">
+
+        <label>Event name:</label>
+        <input type="text" name="name"> <!--names are labels flask can use to identify the information-->
+
+        <br><br>
+
+        <label>Date:</label>
+        <input type="date" name="event_date">
+
+        <br><br>
+
+        <label>Location:</label>
+        <input type="text" name="location">
+
+        <br><br>
+
+        <label>Description:</label>
+        <textarea name="description"></textarea>
+
+        <br><br>
+
+        <label>Capacity:</label>
+        <input type="number" name="capacity">
+
+        <br><br>
+
+        <button type="submit">Add Event</button>
+
+    </form>
+
+    <br>
+
+    <a href="/">← Back to Events</a>
+
+</body>
+</html>
